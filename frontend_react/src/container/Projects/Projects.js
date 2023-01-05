@@ -22,7 +22,20 @@ function Projects() {
     });
     }, []);
 
-  function handleWorkFilter(item) {}
+  function handleProjectsFilter(item) {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+
+      if (item === "All") {
+        setProjectsFilter(projects)
+      } else {
+        setProjectsFilter(projects.filter(project => project.tags.includes(item)))
+      }
+    }, 500);
+  };
 
   return (
     <>
@@ -35,7 +48,7 @@ function Projects() {
           (item, index) => (
             <div
               key={index}
-              onClick={() => handleWorkFilter(item)}
+              onClick={() => handleProjectsFilter(item)}
               className={`app__work-filter-item app__flex p-text ${
                 activeFilter === item ? "item-active" : ""
               }`}
