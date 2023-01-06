@@ -19,10 +19,10 @@ function Projects() {
     const query = `*[_type == "projects"]`;
 
     client.fetch(query).then(data => {
-        setProjects(data);
-        setProjectsFilter(data);
+      setProjects(data);
+      setProjectsFilter(data);
     });
-    }, []);
+  }, []);
 
   function handleProjectsFilter(item) {
     setActiveFilter(item);
@@ -32,12 +32,14 @@ function Projects() {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
       if (item === "All") {
-        setProjectsFilter(projects)
+        setProjectsFilter(projects);
       } else {
-        setProjectsFilter(projects.filter(project => project.tags.includes(item)))
+        setProjectsFilter(
+          projects.filter(project => project.tags.includes(item))
+        );
       }
     }, 500);
-  };
+  }
 
   return (
     <>

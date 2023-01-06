@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 import images from "../../constants/images";
 
 const scaleVariants = {
-    whileInView: {
-        scale: [0, 1],
-        opacity: [0, 1],
-        transition: {
-            duration: 1,
-            ease: "easeInOut"
-        }
+  whileInView: {
+    scale: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      duration: 1,
+      ease: "easeInOut"
     }
+  }
 };
 
 function Header() {
@@ -53,7 +53,7 @@ function Header() {
           src={images.circle}
           alt="profile_circle"
           className="overlay_circle"
-        /> 
+        />
       </motion.div>
 
       <motion.div
@@ -62,9 +62,9 @@ function Header() {
         className="app__header-circles"
       >
         {[images.flutter, images.redux, images.sass].map((circle, index) => (
-            <div className="circle-cmp app__flex" key={`circle-${index}`}>
-                <img src={circle} alt="circle" />
-            </div>
+          <div className="circle-cmp app__flex" key={`circle-${index}`}>
+            <img src={circle} alt="circle" />
+          </div>
         ))}
       </motion.div>
     </div>

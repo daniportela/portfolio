@@ -47,7 +47,10 @@ function Skills() {
 
         <div className="app__skills-exp">
           {workExperience.map((experience, idx) => (
-            <motion.div key={experience.year + idx} className="app__skills-exp-item">
+            <motion.div
+              key={experience.year + idx}
+              className="app__skills-exp-item"
+            >
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
@@ -55,18 +58,18 @@ function Skills() {
               <motion.div className="app__skills-exp-jobs">
                 {experience.jobs.map(job => (
                   <Fragment key={experience._id}>
-                      <Tippy content={job.desc} className="skills-tooltip">
-                        <motion.div
-                          id={job.name}
-                          className="app__skills-exp-job"
-                          whileInView={{ opacity: [0, 1] }}
-                          transition={{ duration: 0.5 }}
-                        >
-                          <h4 className="bold-text">{job.name}</h4>
-                          <p className="p-text">{job.company}</p>
-                        </motion.div>
-                      </Tippy>
-                    </Fragment>
+                    <Tippy content={job.desc} className="skills-tooltip">
+                      <motion.div
+                        id={job.name}
+                        className="app__skills-exp-job"
+                        whileInView={{ opacity: [0, 1] }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <h4 className="bold-text">{job.name}</h4>
+                        <p className="p-text">{job.company}</p>
+                      </motion.div>
+                    </Tippy>
+                  </Fragment>
                 ))}
               </motion.div>
             </motion.div>
