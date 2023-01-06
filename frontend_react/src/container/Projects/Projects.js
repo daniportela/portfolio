@@ -5,6 +5,8 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 import AppWrapper from "../../wrapper/AppWrapper";
+import MotionWrapper from "../../wrapper/MotionWrapper";
+
 import { urlFor, client } from "../../client";
 
 function Projects() {
@@ -119,4 +121,8 @@ function Projects() {
   );
 }
 
-export default AppWrapper(Projects, "projects");
+export default AppWrapper(
+  MotionWrapper(Projects, "app__works"),
+  "projects",
+  "app__primarybg"
+);

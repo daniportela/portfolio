@@ -1,10 +1,10 @@
 import "./Skills.scss";
 import React, { useState, useEffect, Fragment } from "react";
 import AppWrapper from "../../wrapper/AppWrapper";
-import { Tooltip } from "react-tooltip";
+import MotionWrapper from "../../wrapper/MotionWrapper";
 
+import Tippy from "@tippyjs/react";
 import { motion } from "framer-motion";
-
 import { urlFor, client } from "../../client";
 
 function Skills() {
@@ -46,32 +46,27 @@ function Skills() {
         </motion.div>
 
         <div className="app__skills-exp">
-          {workExperience.map(experience => (
-              <motion.div key={experience.year} className="app__skills-exp-item">
-                <div className="app__skills-exp-year">
-                  <p className="bold-text">{experience.year}</p>
-                </div>
+          {workExperience.map((experience, idx) => (
+            <motion.div key={experience.year + idx} className="app__skills-exp-item">
+              <div className="app__skills-exp-year">
+                <p className="bold-text">{experience.year}</p>
+              </div>
 
               <motion.div className="app__skills-exp-jobs">
                 {experience.jobs.map(job => (
-                  <>
-                    <motion.div
-                      key={job._id}
-                      id={job.name}
-                      className="app__skills-exp-job"
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <h4 className="bold-text">{job.name}</h4>
-                      <p className="p-text">{job.company}</p>
-                    </motion.div>
-
-                    <Tooltip
-                      anchorId={job.name}
-                      content={job.desc}
-                      className="skills-tooltip"
-                    />
-                  </>
+                  <Fragment key={experience._id}>
+                      <Tippy content={job.desc} className="skills-tooltip">
+                        <motion.div
+                          id={job.name}
+                          className="app__skills-exp-job"
+                          whileInView={{ opacity: [0, 1] }}
+                          transition={{ duration: 0.5 }}
+                        >
+                          <h4 className="bold-text">{job.name}</h4>
+                          <p className="p-text">{job.company}</p>
+                        </motion.div>
+                      </Tippy>
+                    </Fragment>
                 ))}
               </motion.div>
             </motion.div>
@@ -82,4 +77,8 @@ function Skills() {
   );
 }
 
-export default AppWrapper(Skills, "skills");
+export default AppWrapper(
+  MotionWrapper(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
+);
