@@ -23,7 +23,7 @@ function Skills() {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experience</h2>
+      <h2 className="head-text">Habilidades y experiencia</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -82,6 +82,6 @@ function Skills() {
 
 export default AppWrapper(
   MotionWrapper(Skills, "app__skills"),
-  "skills",
+  "habilidades",
   "app__whitebg"
 );

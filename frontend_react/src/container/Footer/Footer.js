@@ -38,12 +38,12 @@ function Footer() {
 
     return (
         <>
-            <h2 className="head-text">Take a coffe & chat with me</h2>
+            <h2 className="head-text">Chatea conmigo</h2>
 
             <div className="app__footer-cards">
                 <div className="app__footer-card">
                     <img src={images.email} alt="email" />
-                    <a href="mailto:hello@dani.com" className="p-text">hello@dani.com</a>
+                    <a href="mailto:hello@dani.com" className="p-text">danyportela96@gmail.com</a>
                 </div>
                 <div className="app__footer-card">
                     <img src={images.mobile} alt="mobile" />
@@ -94,7 +94,7 @@ function Footer() {
             :
 
             <div>
-                <h3 className="head-text">Thank you for getting in touch!</h3>
+                <h3 className="head-text">Gracias por contactarme!</h3>
             </div>
         }
         </>
@@ -103,6 +103,6 @@ function Footer() {
 
 export default AppWrapper(
     MotionWrapper(Footer, "app__footer"),
-    "contact",
+    "contacto",
     "app__primarybg"
 );

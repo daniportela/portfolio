@@ -44,8 +44,7 @@ function Projects() {
   return (
     <>
       <h2 className="head-text">
-        {" "}
-        My creative <span>portfolio</span> <br /> section
+        Mi <span>portfolio</span> creativo
       </h2>
       <div className="app__work-filter">
         {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
@@ -111,6 +110,6 @@ function Projects() {
 
 export default AppWrapper(
   MotionWrapper(Projects, "app__works"),
-  "projects",
+  "portfolio",
   "app__primarybg"
 );

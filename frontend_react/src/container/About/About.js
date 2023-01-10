@@ -20,8 +20,7 @@ function About() {
   return (
     <>
       <h2 className="head-text">
-        I know that <span>Good dev</span> <br /> means{" "}
-        <span>good business</span>
+        Sé que <br /><span>buen desarrollo</span> <br/> = <br/> <span>negocio exitoso</span>
       </h2>
 
       <div className="app__profiles">
@@ -49,6 +48,6 @@ function About() {
 
 export default AppWrapper(
   MotionWrapper(About, "app__about"),
-  "about",
+  "sobre mí",
   "app__whitebg"
 );
