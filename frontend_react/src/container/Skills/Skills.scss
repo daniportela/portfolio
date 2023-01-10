@@ -9,6 +9,7 @@
   margin-top: 3rem;
   display: flex;
   flex-direction: row;
+  column-gap: 80px;
 
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -17,9 +18,8 @@
 }
 
 .app__skills-list {
-  margin-right: 5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
   flex: 1;
@@ -53,8 +53,8 @@
     }
 
     @media screen and (min-width: 2000px) {
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
     }
 
     @media screen and (max-width: 900px) {
@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     flex: 1;
 
     @media screen and (max-width: 900px) {
@@ -135,18 +135,19 @@
 }
 
 .skills-tooltip {
+    padding: 1rem;
     max-width: 300px;
     background-color: var(--white-color);
     box-shadow: 0 0 25px rgba(0, 0, 0, .1);
+    font-family: var(--font-base);
     border-radius: 5px;
-    padding: 1rem;
     color: var(--gray-color);
     text-align: center;
     line-height: 1.5;
     opacity: 1;
 
     @media screen and (min-width: 2000px) {
-        font-size: 1.75rem;
+        font-size: 1.2rem;
         max-width: 500px;
         line-height: 2;
     }

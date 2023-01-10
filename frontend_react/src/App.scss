@@ -63,7 +63,7 @@
   }
 
   @media screen and (min-width: 2000px) {
-    font-size: 4rem;
+    font-size: 2.7rem;
   }
 
   @media screen and (max-width: 450px) {
@@ -72,7 +72,7 @@
 }
 
 .p-text {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   text-align: left;
   color: var(--gray-color);
   line-height: 1.5;
@@ -83,7 +83,7 @@
 }
 
 .bold-text {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--black-color);
   text-align: left;
@@ -102,15 +102,18 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-
+  position: fixed;
+  left: 10px;
+  top: 40%;
+  z-index: 2;
   padding: 1rem;
 
-  div {
-    width: 40px;
-    height: 40px;
+  a {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: var(--white-color);
-    margin: 0.25rem 0;
+    margin: .5rem 0;
     border: 1px solid var(--lightGray-color);
 
     display: flex;
@@ -120,8 +123,8 @@
     transition: all 0.3s ease-in-out;
 
     svg {
-      width: 15px;
-      height: 15px;
+      width: 40%;
+      height: 40%;
       color: var(--gray-color);
     }
 
@@ -133,57 +136,27 @@
         color: var(--white-color);
       }
     }
-
-    @media screen and (min-width: 2000px) {
-      width: 70px;
-      height: 70px;
-
-      margin: 0.5rem 0;
-
-      svg {
-        width: 30px;
-        height: 30px;
-      }
-    }
   }
 }
 
 .app__navigation {
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  padding: 1rem;
-
   .app__navigation-dot {
     width: 10px;
-    height: 20px;
-    border-radius: 25%;
+    height: 10px;
+    border-radius: 50%;
     background-color: #cbcbcb;
-    margin: .4rem;
+    margin: .6rem;
 
     transition: all 0.2s ease-in-out;
 
     &:hover {
       background-color: var(--secondary-color);
-      transform: scale(1.5);
-    }
-  }
-
-  .app__navigation-dot:nth-child(even) {
-    transform: rotate(45deg);
-
-    &:hover {
-      transform: rotate(-45deg);
-    }
-  }
-
-  .app__navigation-dot:nth-child(odd) {
-    transform: rotate(-45deg);
-
-    &:hover {
-      transform: rotate(45deg);
     }
   }
 }

@@ -104,5 +104,5 @@ function Footer() {
 export default AppWrapper(
     MotionWrapper(Footer, "app__footer"),
     "contact",
-    "app__whitebg"
+    "app__primarybg"
 );

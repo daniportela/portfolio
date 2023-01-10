@@ -5,9 +5,9 @@
 }
 
 .app__testimonial-item {
-    width: 60%;
+    width: 40%;
     min-height: 320px;
-    padding: 2rem;
+    padding: 5rem;
     background-color: var(--white-color);
     display: flex;
     border-radius: 15px;
@@ -22,7 +22,7 @@
     }
 
     @media screen and (min-width: 2000px) {
-        min-height: 450px;
+        min-height: 350px;
 
         img {
             width: 150px;
@@ -41,11 +41,11 @@
 
 .app__testimonial-content {
     height: 100%;
-    padding: 0 2rem;
+    margin-left: 2.2rem;
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     flex: 1;
 

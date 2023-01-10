@@ -1,20 +1,16 @@
 import React from "react";
 
-import { BsTwitter, BsInstagram } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function SocialMedia() {
     return (
         <div className="app__social">
-            <div>
-                <BsTwitter />
-            </div>
-            <div>
-                <FaFacebookF />
-            </div>
-            <div>
-                <BsInstagram />
-            </div>
+            <a href="https://github.com/daniportela" target="_blank" rel="noopener noreferrer">
+                <BsGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-portela/" target="_blank" rel="noopener noreferrer">
+                <BsLinkedin />
+            </a>
         </div>
     );
 };
