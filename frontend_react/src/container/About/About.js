@@ -5,11 +5,13 @@ import AppWrapper from "../../wrapper/AppWrapper";
 import MotionWrapper from "../../wrapper/MotionWrapper";
 
 import { motion } from "framer-motion";
-
 import { urlFor, client } from "../../client";
+import { useTranslation } from "react-i18next";
 
 function About() {
   const [abouts, setAbouts] = useState([]);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const query = "*[_type == 'abouts']";
@@ -20,8 +22,11 @@ function About() {
   return (
     <>
       <h2 className="head-text">
-        Sé que <br /><span>buen desarrollo</span> <br/> = <br/> <span>negocio exitoso</span>
+      {t('aboutHeading')}
       </h2>
+      <p className="p-text about-info">Soy Lic. en Diseño Multimedia (UADE) desde el 2019. Después de varios años de trabajar en este rubro (y dado que siempre tuve gran afición por la programación), decidí hacer un cambio en mi carrera. Comencé a aprender desarrollo web pasito a pasito (ya saben como es: primero HTML, luego CSS) hasta el punto de poder lograr soluciones de negocio fullstack y combinarlas con mis conocimientos de diseño.</p>
+      <br/>
+      <p className="p-text about-phrase">Carismático, comprometido y con un gran apetito de seguir creciendo como profesional.</p>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (

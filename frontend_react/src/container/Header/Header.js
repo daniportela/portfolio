@@ -50,9 +50,9 @@ function Header() {
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          src={images.circle}
+          src={images.logoSVG}
           alt="profile_circle"
-          className="overlay_circle"
+          className="overlay_logo"
         />
       </motion.div>
 

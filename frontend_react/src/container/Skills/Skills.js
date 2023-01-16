@@ -23,7 +23,7 @@ function Skills() {
 
   return (
     <>
-      <h2 className="head-text">Habilidades y experiencia</h2>
+      <h2 className="head-text">Habilidades y <span>experiencia</span></h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">

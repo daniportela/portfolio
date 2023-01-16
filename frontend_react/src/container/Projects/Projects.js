@@ -47,7 +47,7 @@ function Projects() {
         Mi <span>portfolio</span> creativo
       </h2>
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
+        {["Diseño Web", "Frontend", "Fullstack", "Todo"].map(
           (item, index) => (
             <div
               key={index}
@@ -85,9 +85,13 @@ function Projects() {
                     <AiFillEye />
                 </a>
 
-                <a href={project.codeLink} target="_blank" rel="noreferrer">
+                {project.codeLink && ( 
+                  <a href={project.codeLink} target="_blank" rel="noreferrer">
                     <AiFillGithub />
-                </a>
+                  </a>
+                  )
+                }
+                
               </motion.div>
             </div>
 

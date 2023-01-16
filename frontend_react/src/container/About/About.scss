@@ -2,6 +2,22 @@
     width: 100%;
     flex-direction: column;
     flex: 1;
+    
+    p {
+        width: 85%;
+        max-width: 1000px;
+    }
+
+    .about-info {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .about-phrase {
+        font-weight: 600;
+        text-align: center;
+        color: var(--black-color);
+    }
 }
 
 .app__profiles {
