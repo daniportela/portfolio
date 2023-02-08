@@ -8,8 +8,11 @@ import AppWrapper from "../../wrapper/AppWrapper";
 import MotionWrapper from "../../wrapper/MotionWrapper";
 
 import { urlFor, client } from "../../client";
+import { useTranslation } from "react-i18next";
 
 function Projects() {
+  const { t } = useTranslation("projectsHeading");
+
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [projects, setProjects] = useState([]);
@@ -44,7 +47,7 @@ function Projects() {
   return (
     <>
       <h2 className="head-text">
-        Mi <span>portfolio</span> creativo
+          Mi <span>portfolio</span> creativo
       </h2>
       <div className="app__work-filter">
         {["Diseño Web", "Frontend", "Fullstack", "Todo"].map(

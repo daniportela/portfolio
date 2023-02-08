@@ -5,6 +5,7 @@ import AppWrapper from "../../wrapper/AppWrapper";
 
 import { motion } from "framer-motion";
 import images from "../../constants/images";
+import { useTranslation } from "react-i18next";
 
 const scaleVariants = {
   whileInView: {
@@ -18,6 +19,8 @@ const scaleVariants = {
 };
 
 function Header() {
+  const { t } = useTranslation();
+
   return (
     <div className="app__header app__flex">
       <motion.div
@@ -29,14 +32,14 @@ function Header() {
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hola, soy</p>
+              <p className="p-text">{t("headerText1")}</p>
               <h1 className="head-text">Dani</h1>
             </div>
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">Desarrollador</p>
-            <p className="p-text">Fullstack</p>
+            <p className="p-text">{t("headerText2")}</p>
+            <p className="p-text">{t("headerText3")}</p>
           </div>
         </div>
       </motion.div>

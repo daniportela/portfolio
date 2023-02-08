@@ -7,12 +7,26 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      "aboutHeading": "A brief intro"
+      // Header
+      "headerText1": "Hi, I'm",
+      "headerText2": "Fullstack",
+      "headerText3": "Developer",
+      // About
+      "aboutHeading": "A brief intro",
+      // Projects
+      "projectsHeading": "My creative portfolio"
     }
   },
   es: {
     translation: {
-      "aboutHeading": "Un poco sobre mí"
+      // Header
+      "headerText1": "Hola, soy",
+      "headerText2": "Desarrollador",
+      "headerText3": "Fullstack",
+      // About
+      "aboutHeading": "Un poco sobre mí",
+      // Projects
+      "projectsHeading": "My creative portfolio"
     }
   }
 };
